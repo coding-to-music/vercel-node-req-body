@@ -16,6 +16,12 @@ curl -X POST "https://vercel-node-req-body-geqd03f1a-coding-to-music.vercel.app/
 }'
 ```
 
+Response:
+
+```java
+Hello Reader, you just parsed the request body!
+```
+
 In this guide, we will show you how to parse a Node.js request body, for use inside a Serverless Function deployed to Vercel, without requiring a framework such as Express.
 
 This guide assumes the request is sent with a
@@ -69,19 +75,6 @@ vercel
 
 Deploying the app with the vercel command.
 
-You have now created and deployed your project, all that's left to do is test that it works.
-
-Step 3: Sending the Request
-To verify that the JSON is being parsed correctly, make a POST request to your new deployment using curl by executing the below code inside your terminal:
-
-```java
-curl -X POST "https://vercel-node-req-body-geqd03f1a-coding-to-music.vercel.app/api" \
-  -H "Content-Type: application/json" \
-  -d '{
-  "name": "Reader"
-}'
-```
-
 vercel
 
 ```java
@@ -101,6 +94,26 @@ vercel --prod
 Vercel CLI 23.1.2
 🔍  Inspect: https://vercel.com/coding-to-music/vercel-node-req-body/CgXMCtMgE8wgFcRDgpF3SWv6NndZ [1s]
 ✅  Production: https://vercel-node-req-body.vercel.app [8s]
+```
+
+You have now created and deployed your project, all that's left to do is test that it works.
+
+## Step 3: Sending the Request
+
+To verify that the JSON is being parsed correctly, make a POST request to your new deployment using curl by executing the below code inside your terminal:
+
+```java
+curl -X POST "https://vercel-node-req-body-geqd03f1a-coding-to-music.vercel.app/api" \
+  -H "Content-Type: application/json" \
+  -d '{
+  "name": "Reader"
+}'
+```
+
+Response:
+
+```java
+Hello Reader, you just parsed the request body!
 ```
 
 Making a POST request using curl.
